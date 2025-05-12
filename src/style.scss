@@ -4,6 +4,11 @@ body {
     padding: 0;
 }
 
+* {
+    color: rgb(200, 200, 200);
+    font-family: 'Yuji Syuku', serif;
+  }
+
 :root {
     --color-bg1: rgb(40, 40, 40);
     --color-bg2: rgb(20, 20, 20);
@@ -17,6 +22,7 @@ body {
     --blending: hard-light;
   }
 
+// ----- GRADIENT BACKGROUND ----- //
 @keyframes moveInCircle {
     0% {
         transform: rotate(0deg);
@@ -63,7 +69,8 @@ body {
     filter: url(#grain);
     width: 100vw;
     height: 100vh;
-    position: relative;
+    position: fixed;
+    z-index: -1;
     overflow: hidden;
     background: linear-gradient(40deg, var(--color-bg1), var(--color-bg2));
     top: 0;
@@ -178,3 +185,59 @@ body {
         opacity: 0.7;
     }
 }
+
+// ----- NAVIGATION BAR ----- //
+#navbar {
+    z-index: 0;
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    top: 10px;
+    gap: 25px;
+    left: 0;
+    right: 0;
+}
+
+.nav-button {
+    background: transparent;
+    border: none;
+    color: rgb(130, 130, 130);
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+
+    &:hover {
+        color: rgb(255, 255, 255);
+        transform: scale(1.05);
+    }
+}
+
+#intro {
+    display: flex;
+    font-family: 'Work Sans', sans-serif;
+    letter-spacing: 10px;
+    justify-content: center; 
+    align-items: center;
+    height: 100vh;
+    font-size: 4rem;
+}
+
+// ----- SOCIALS LINKS ----- //
+#socials {
+    display: flex;
+    justify-content: center; 
+
+}
+.socials-button {
+    background: transparent;
+    border: none;
+    filter: invert(0.8);
+    cursor: pointer;
+}
+
+.socials-button img {
+    width: 50%;
+    height: 50%;
+    object-fit: contain;
+  }
