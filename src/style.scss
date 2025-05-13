@@ -7,7 +7,8 @@ body {
 * {
     color: rgb(200, 200, 200);
     font-family: 'Yuji Syuku', serif;
-  }
+}
+
 
 :root {
     --color-bg1: rgb(40, 40, 40);
@@ -20,7 +21,8 @@ body {
     --color-interactive: 150, 150, 150;
     --circle-size: 90%;
     --blending: hard-light;
-  }
+}
+
 
 // ----- GRADIENT BACKGROUND ----- //
 @keyframes moveInCircle {
@@ -89,7 +91,7 @@ body {
         filter: url(#goo) blur(40px);
         width: 100%;
         height: 100%;
-        
+
     }
 
     .g1 {
@@ -214,21 +216,23 @@ body {
 }
 
 #intro {
-    display: flex;
     font-family: 'Work Sans', sans-serif;
+    display: flex;
+    font-weight: 400;
     letter-spacing: 10px;
-    justify-content: center; 
+    justify-content: center;
     align-items: center;
     height: 100vh;
-    font-size: 4rem;
+    font-size: 8rem;
 }
 
 // ----- SOCIALS LINKS ----- //
 #socials {
     display: flex;
-    justify-content: center; 
+    justify-content: center;
 
 }
+
 .socials-button {
     background: transparent;
     border: none;
@@ -240,4 +244,59 @@ body {
     width: 50%;
     height: 50%;
     object-fit: contain;
+}
+
+
+// ----- CONTENT SECTIONS ---- //
+#projects, #experience, #about {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center; 
+    margin: 2rem auto;  
+
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    width: 90%;
+}
+
+.p1, .p2, .p3 {
+    display: flex;       
+    align-items: flex-start;  
+    gap: 2rem;              
+  }
+
+.h1 {
+    font-size: 2rem;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
+    letter-spacing: 10px;
+}
+
+.h2 {
+    font-size: 1rem;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
+    letter-spacing: 10px;
+    text-align: center;
+}
+
+.bullet-points {
+    width: 80%;
+    color: rgb(255, 100, 100); 
+}
+
+.description {
+    width: 80%;
+    font-size: 1.2rem;
+    font-family: 'Work Sans', sans-serif;
+    text-align: center;
+}
+
+// ----- DEMO VIDEOS ----- //
+.project-demo {
+    width: 30%;    
+    z-index: 2;
+    border-radius: 10px;
+    filter: brightness(0.3);
   }

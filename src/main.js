@@ -1,6 +1,6 @@
 import './style.scss';
 
-
+// gradient background animation
 document.addEventListener('DOMContentLoaded', () => {
     const interBubble = document.querySelector('.interactive');
     if (!interBubble) return;
@@ -10,8 +10,8 @@ document.addEventListener('DOMContentLoaded', () => {
     let tgY = 0;
 
     function move() {
-        curX += (tgX - curX) / 20;
-        curY += (tgY - curY) / 20;
+        curX += (tgX - curX) / 5;
+        curY += (tgY - curY) / 5;
         interBubble.style.transform = `translate(${Math.round(curX)}px, ${Math.round(curY)}px)`;
         requestAnimationFrame(() => {
             move();
@@ -25,3 +25,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
     move();
 });
+
+// social link buttons
+const githubLink = document.getElementById('github-button');
+const linkedinLink = document.getElementById('linkedin-button');
+const emailLink = document.getElementById('email-button');
+
+githubLink.addEventListener('click', () => {
+    window.location.href = 'https://github.com/Ephernicus';
+});
+
+linkedinLink.addEventListener('click', () => {
+    window.location.href = 'https://www.linkedin.com/in/mjiu/';
+});
+
+emailLink.addEventListener('click', () => {
+    window.location.href = 'mailto:jiumaggie@gmail.com';
+});
+

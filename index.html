@@ -1,15 +1,17 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
-    <link rel="icon"/>
+    <link rel="icon" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
-    
+
     <title>Maggie Jiu</title>
-  </head>
-  <body>
+</head>
+
+<body>
     <div id="navbar">
         <button class="nav-button" id="about-button">
             About
@@ -24,45 +26,111 @@
             Gallery
         </button>
     </div>
+
     <section id="intro">MAGGIE JIU</section>
     <section id="socials">
         <button class="socials-button" id="linkedin-button">
-            <img src="/src/assets/linkedin.png"/>
+            <img src="/src/assets/linkedin.png" />
         </button>
         <button class="socials-button" id="github-button">
-            <img src="/src/assets/github.png"/>
+            <img src="/src/assets/github.png" />
         </button>
         <button class="socials-button" id="email-button">
-            <img src="/src/assets/email.png"/>
+            <img src="/src/assets/email.png" />
         </button>
     </section>
+
+    <section id="about">
+        <header>
+            <h1 class="h1">ABOUT</h1>
+        </header>
+        <div id="about-text">
+            <p class="description">I am a software engineer with a passion for creating intuitive and engaging user
+                experiences.
+                I have a strong foundation in web development, with experience in both front-end and back-end
+                technologies. I am always eager to learn new skills and take on new challenges.</p>
+        </div>
+
+
+        <section id="projects">
+            <header>
+                <h1 class="h1">PROJECTS</h1>
+            </header>
+            <div id="p1">
+                <h2 class="h2">SPINTEREST</h2>
+                <video class="project-demo" src="/src/assets/spinterest.mov" autoplay loop playsinline></video>
+                <ul class="bullet-points">
+                    <li>Sleek Pinterest-inspired web app to simplify curating visual ideas, featuring infinite scrolling
+                        image feeds and real-time search powered by the Unsplash API.</li>
+                    <li>Implemented custom pin creation and cataloging functionality using React state management and
+                        dynamic UI components.</li>
+                    <li>Integrated secure, multi-device user authentication using Firebase, with persistent session
+                        handling
+                        and form validation.</li>
+                </ul>
+            </div>
+            <div id="p2">
+                <h2 class="h2">SYPHOS</h2>
+                <video class="project-demo" src="/src/assets/syphos.mov" autoplay loop playsinline></video>
+                <ul class="bullet-points">
+                    <li>A clean, distraction-free web-based writing app with real-time text-clearing mechanic triggered
+                        by
+                        user inactivity to gamify focus and overcome writer’s block.</li>
+                    <li>Designed accessibly-focused interface with JavaScript and HTML/CSS, featuring multiple UI modes
+                        for
+                        diverse user needs.</li>
+                    <li>Developed a RESTful API using Express and Node.js to serve AI-generated story topics.</li>
+                </ul>
+            </div>
+            <div id="p3">
+                <h2 class="h2">KIT TAC TOE</h2>
+                <video class="project-demo" src="/src/assets/kit-tac-toe.mov" autoplay loop playsinline></video>
+                <ul class="bullet-points">
+                    <li>Crafted a Unity mini-game in C# with a strong emphasis on artistic presentation and responsive
+                        mechanics.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="experience">
+            <header>
+                <h1 class="h1">EXPERIENCE</h1>
+            </header>
+        </section>
+
+        <section id="gallery">
+        </section>
+    </section>
+
     <div class="gradient-bg">
         <svg>
             <filter id="grain">
                 <!-- grain characteristics -->
-                <feTurbulence type="turbulence" baseFrequency="0.5" numOctaves="1" result="noise" />
+                <feTurbulence type="turbulence" baseFrequency="0.4" numOctaves="1" result="noise" />
                 <!-- blending mechanism with gradient bg -->
                 <feBlend in="SourceGraphic" in2="noise" mode="color-burn" />
             </filter>
         </svg>
         <svg xmlns="http://www.w3.org/2000/svg">
             <defs>
-              <filter id="goo">
-                <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
-                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8" result="goo" />
-                <feBlend in="SourceGraphic" in2="goo" />
-              </filter>
+                <filter id="goo">
+                    <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                    <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8"
+                        result="goo" />
+                    <feBlend in="SourceGraphic" in2="goo" />
+                </filter>
             </defs>
-          </svg>
-          <div class="gradients">
+        </svg>
+        <div class="gradients">
             <div class="g1"></div>
             <div class="g2"></div>
             <div class="g3"></div>
             <div class="g4"></div>
             <div class="g5"></div>
             <div class="interactive"></div>
-          </div>
+        </div>
     </div>
     <script type="module" src="/src/main.js"></script>
-  </body>
+</body>
+
 </html>
