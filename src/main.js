@@ -43,3 +43,21 @@ emailLink.addEventListener('click', () => {
     window.location.href = 'mailto:jiumaggie@gmail.com';
 });
 
+
+// gallery section functionality
+// 1. grab every image file (case‐insensitive extensions)
+const modules = import.meta.glob(
+    '/src/assets/gallery/*.{jpg,JPG,png,PNG,jpeg,JPEG,gif,GIF,heic,HEIC}',
+    { eager: true }
+  );
+  
+  // 2. extract the URLs
+  const urls = Object.values(modules).map(m => m.default);
+  
+  // 3. render them
+  const gallery = document.querySelector('.gallery');
+  urls.forEach(src => {
+    const img = document.createElement('img');
+    img.src = src;
+    gallery.appendChild(img);
+  });
